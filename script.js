@@ -14,15 +14,6 @@ function View() {
 }
 View();
 
-function convert() {
-    let base64 = btoa(str);
-    coded = base64;
-    View();
-}
-
-// Decoder
-
-
 function updateView() {
     document.getElementById('app2').innerHTML = /*html*/`
             <div id="tekst">Kopier tegnene du fikk over, inn her:</div>
@@ -32,6 +23,12 @@ function updateView() {
             `;
 }
 updateView();
+
+function convert() {
+    let base64 = btoa(str);
+    coded = base64;
+    View();
+}
 
 function convertBack() {
     let decoded = atob(base64);
