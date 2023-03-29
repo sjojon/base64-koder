@@ -6,7 +6,7 @@ let output = '';
 
 function View() {
     document.getElementById('app1').innerHTML = /*html*/`
-            <div>Skriv inn det du skal kode her:</div>
+            <div id="tekst">Skriv inn det du skal kode her:</div>
             <input type="text" oninput="str = this.value"><br>
             <button onclick="convert()">Gjøre om til Base64</button><br>
             <div id="output">${coded}<br></div>
@@ -25,7 +25,7 @@ function convert() {
 
 function updateView() {
     document.getElementById('app2').innerHTML = /*html*/`
-            <div>Kopier tegnene du fikk over, inn her:</div>
+            <div id="tekst">Kopier tegnene du fikk over, inn her:</div>
             <input type="text" oninput="base64 = this.value"><br>
             <button onclick="convertBack()">Tilbake til tekst</button><br>
             <div id="output">${output}</div>
